@@ -1,14 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="mycontent">
+    <div class="container">
+        <header>
+            <h1>Natural Language Form <span>with custom input elements</span></h1>
+        </header>
+        <div class="main clearfix">
+            <form id="nl-form" class="nl-form">
+                I feel to eat
+                <span (click)="showAlert(1)">{{selectedAlert1}}</span>
+                <br />in a
+                <span (click)="showAlert(2)">{{selectedAlert2}}</span>
+                restaurant
+                <br />at
+                <span (click)="showAlert(3)">{{selectedAlert3}}</span>
+                in
+                <span (click)="showInput()" *ngIf="!flagInput">any city</span>
+                <input type="text" value="" placeholder="any city" *ngIf="flagInput"/>
+                <div class="nl-submit-wrap">
+                    <button class="nl-submit" type="submit" (click)="onClickButton()">Find a restaurant</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </ion-content>
