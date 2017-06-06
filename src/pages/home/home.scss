@@ -85,7 +85,7 @@ page-home {
   /* the toggle is the visible part in the form */
   .nl-form input,
   .nl-form span {
-    line-height: inherit;
+    line-height: 1.5!important;
     display: inline-block;
     color: #b14943;
     cursor: pointer;
