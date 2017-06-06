@@ -1,5 +1,11 @@
 page-home {
 
+  *,*:before,*:after {
+    box-sizing:border-box;
+    transition:.25s ease-in-out;
+  }
+
+
   /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
   .clearfix:before, .clearfix:after { content: " "; display: table; }
   .clearfix:after { clear: both; }
@@ -136,6 +142,17 @@ page-home {
     font-size: 40%;
     font-weight: bold;
     letter-spacing: 3px;
+    i {
+      transition:0s 0s ease-in-out;
+    }
+    &:hover {
+      box-shadow:inset 650px 0 0 #16a085;
+      color:white;
+      cursor:pointer;
+      &:after {
+        color:white;
+      }
+    }
   }
 
   .nl-submit:before {
